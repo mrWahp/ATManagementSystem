@@ -17,7 +17,31 @@ namespace ATManagementSystem
             InitializeComponent();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         private void Balance_Load(object sender, EventArgs e)
+        {
+            AccNumberlbl.Text = Home.AccNumber;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AccNumberlbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }

@@ -41,13 +41,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.AccNumbTb = new System.Windows.Forms.TextBox();
+            this.AccNumTb = new System.Windows.Forms.TextBox();
             this.AccNametb = new System.Windows.Forms.TextBox();
-            this.FnameTb = new System.Windows.Forms.TextBox();
+            this.FanameTb = new System.Windows.Forms.TextBox();
             this.Addresstb = new System.Windows.Forms.TextBox();
             this.PhoneTb = new System.Windows.Forms.TextBox();
             this.pintb = new System.Windows.Forms.TextBox();
-            this.educationtb = new System.Windows.Forms.ComboBox();
+            this.educationcb = new System.Windows.Forms.ComboBox();
             this.dobdate = new System.Windows.Forms.DateTimePicker();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -77,6 +77,7 @@
             this.label1.Size = new System.Drawing.Size(30, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -191,13 +192,13 @@
             this.label11.Text = "PIN";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // AccNumbTb
+            // AccNumTb
             // 
-            this.AccNumbTb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccNumbTb.Location = new System.Drawing.Point(179, 137);
-            this.AccNumbTb.Name = "AccNumbTb";
-            this.AccNumbTb.Size = new System.Drawing.Size(238, 35);
-            this.AccNumbTb.TabIndex = 21;
+            this.AccNumTb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccNumTb.Location = new System.Drawing.Point(179, 137);
+            this.AccNumTb.Name = "AccNumTb";
+            this.AccNumTb.Size = new System.Drawing.Size(238, 35);
+            this.AccNumTb.TabIndex = 21;
             // 
             // AccNametb
             // 
@@ -206,14 +207,15 @@
             this.AccNametb.Name = "AccNametb";
             this.AccNametb.Size = new System.Drawing.Size(238, 35);
             this.AccNametb.TabIndex = 22;
+            this.AccNametb.TextChanged += new System.EventHandler(this.AccNametb_TextChanged);
             // 
-            // FnameTb
+            // FanameTb
             // 
-            this.FnameTb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FnameTb.Location = new System.Drawing.Point(179, 285);
-            this.FnameTb.Name = "FnameTb";
-            this.FnameTb.Size = new System.Drawing.Size(238, 35);
-            this.FnameTb.TabIndex = 23;
+            this.FanameTb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FanameTb.Location = new System.Drawing.Point(179, 285);
+            this.FanameTb.Name = "FanameTb";
+            this.FanameTb.Size = new System.Drawing.Size(238, 35);
+            this.FanameTb.TabIndex = 23;
             // 
             // Addresstb
             // 
@@ -240,18 +242,18 @@
             this.pintb.Size = new System.Drawing.Size(238, 35);
             this.pintb.TabIndex = 26;
             // 
-            // educationtb
+            // educationcb
             // 
-            this.educationtb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
-            this.educationtb.FormattingEnabled = true;
-            this.educationtb.Items.AddRange(new object[] {
+            this.educationcb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
+            this.educationcb.FormattingEnabled = true;
+            this.educationcb.Items.AddRange(new object[] {
             "Non Graduate",
             "Under Graduate",
             "Post Graduate"});
-            this.educationtb.Location = new System.Drawing.Point(625, 203);
-            this.educationtb.Name = "educationtb";
-            this.educationtb.Size = new System.Drawing.Size(238, 38);
-            this.educationtb.TabIndex = 31;
+            this.educationcb.Location = new System.Drawing.Point(625, 203);
+            this.educationcb.Name = "educationcb";
+            this.educationcb.Size = new System.Drawing.Size(238, 38);
+            this.educationcb.TabIndex = 31;
             // 
             // dobdate
             // 
@@ -265,12 +267,12 @@
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
             this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.DarkSlateGray;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "LOGIN";
+            this.bunifuThinButton21.ButtonText = "Submit";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
@@ -313,10 +315,11 @@
             // occupationtb
             // 
             this.occupationtb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.occupationtb.Location = new System.Drawing.Point(625, 282);
+            this.occupationtb.Location = new System.Drawing.Point(625, 273);
             this.occupationtb.Name = "occupationtb";
             this.occupationtb.Size = new System.Drawing.Size(238, 35);
             this.occupationtb.TabIndex = 37;
+            this.occupationtb.TextChanged += new System.EventHandler(this.occupationtb_TextChanged);
             // 
             // account
             // 
@@ -328,13 +331,13 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.dobdate);
-            this.Controls.Add(this.educationtb);
+            this.Controls.Add(this.educationcb);
             this.Controls.Add(this.pintb);
             this.Controls.Add(this.PhoneTb);
             this.Controls.Add(this.Addresstb);
-            this.Controls.Add(this.FnameTb);
+            this.Controls.Add(this.FanameTb);
             this.Controls.Add(this.AccNametb);
-            this.Controls.Add(this.AccNumbTb);
+            this.Controls.Add(this.AccNumTb);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -371,13 +374,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox AccNumbTb;
+        private System.Windows.Forms.TextBox AccNumTb;
         private System.Windows.Forms.TextBox AccNametb;
-        private System.Windows.Forms.TextBox FnameTb;
+        private System.Windows.Forms.TextBox FanameTb;
         private System.Windows.Forms.TextBox Addresstb;
         private System.Windows.Forms.TextBox PhoneTb;
         private System.Windows.Forms.TextBox pintb;
-        private System.Windows.Forms.ComboBox educationtb;
+        private System.Windows.Forms.ComboBox educationcb;
         private System.Windows.Forms.DateTimePicker dobdate;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Panel panel1;

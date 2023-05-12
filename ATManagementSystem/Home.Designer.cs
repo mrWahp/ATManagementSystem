@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -40,6 +40,7 @@
             this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.AccNumlbl = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,17 +55,6 @@
             this.panel2.Size = new System.Drawing.Size(657, 78);
             this.panel2.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(138, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(377, 37);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Select Your Transaction Please";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -75,6 +65,17 @@
             this.label1.Size = new System.Drawing.Size(30, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "X";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(138, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(377, 37);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Select Your Transaction Please";
             // 
             // bunifuThinButton21
             // 
@@ -100,6 +101,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(194, 59);
             this.bunifuThinButton21.TabIndex = 10;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // bunifuThinButton22
             // 
@@ -204,10 +206,10 @@
             // bunifuThinButton26
             // 
             this.bunifuThinButton26.ActiveBorderThickness = 1;
-            this.bunifuThinButton26.ActiveCornerRadius = 20;
-            this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.DarkSlateGray;
+            this.bunifuThinButton26.ActiveCornerRadius = 45;
+            this.bunifuThinButton26.ActiveFillColor = System.Drawing.SystemColors.Highlight;
             this.bunifuThinButton26.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton26.ActiveLineColor = System.Drawing.SystemColors.Highlight;
             this.bunifuThinButton26.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
             this.bunifuThinButton26.ButtonText = "BALANCE";
@@ -225,6 +227,7 @@
             this.bunifuThinButton26.Size = new System.Drawing.Size(194, 59);
             this.bunifuThinButton26.TabIndex = 15;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton26.Click += new System.EventHandler(this.bunifuThinButton26_Click);
             // 
             // panel1
             // 
@@ -245,12 +248,26 @@
             this.label5.Size = new System.Drawing.Size(76, 26);
             this.label5.TabIndex = 17;
             this.label5.Text = "LOGOUT";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // AccNumlbl
+            // 
+            this.AccNumlbl.AutoSize = true;
+            this.AccNumlbl.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccNumlbl.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.AccNumlbl.Location = new System.Drawing.Point(218, 81);
+            this.AccNumlbl.Name = "AccNumlbl";
+            this.AccNumlbl.Size = new System.Drawing.Size(212, 37);
+            this.AccNumlbl.TabIndex = 4;
+            this.AccNumlbl.Text = "Account Number";
+            this.AccNumlbl.Click += new System.EventHandler(this.AccNumlbl_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 462);
+            this.Controls.Add(this.AccNumlbl);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuThinButton26);
@@ -264,6 +281,7 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -284,5 +302,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label AccNumlbl;
     }
 }

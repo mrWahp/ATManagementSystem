@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AccNumTb = new System.Windows.Forms.TextBox();
+            this.PinTb = new System.Windows.Forms.TextBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 71);
             this.panel1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(551, 1);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 31);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "X";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
@@ -112,21 +124,21 @@
             this.label4.Text = "PIN CODE";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // AccNumTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F);
-            this.textBox1.Location = new System.Drawing.Point(277, 146);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 31);
-            this.textBox1.TabIndex = 7;
+            this.AccNumTb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F);
+            this.AccNumTb.Location = new System.Drawing.Point(277, 146);
+            this.AccNumTb.Name = "AccNumTb";
+            this.AccNumTb.Size = new System.Drawing.Size(252, 31);
+            this.AccNumTb.TabIndex = 7;
             // 
-            // textBox2
+            // PinTb
             // 
-            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F);
-            this.textBox2.Location = new System.Drawing.Point(277, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 31);
-            this.textBox2.TabIndex = 8;
+            this.PinTb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F);
+            this.PinTb.Location = new System.Drawing.Point(277, 209);
+            this.PinTb.Name = "PinTb";
+            this.PinTb.Size = new System.Drawing.Size(252, 31);
+            this.PinTb.TabIndex = 8;
             // 
             // bunifuThinButton21
             // 
@@ -166,17 +178,6 @@
             this.label5.Text = "SIGNUP";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(551, 1);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 31);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "X";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,8 +185,8 @@
             this.ClientSize = new System.Drawing.Size(584, 358);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PinTb);
+            this.Controls.Add(this.AccNumTb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -212,8 +213,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox AccNumTb;
+        private System.Windows.Forms.TextBox PinTb;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

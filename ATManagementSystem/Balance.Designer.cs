@@ -33,10 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Balancelbl = new System.Windows.Forms.Label();
+            this.AccNumberlbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(569, 71);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -61,6 +62,7 @@
             this.label6.Size = new System.Drawing.Size(32, 31);
             this.label6.TabIndex = 11;
             this.label6.Text = "X";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
@@ -83,6 +85,7 @@
             this.label13.Size = new System.Drawing.Size(165, 30);
             this.label13.TabIndex = 37;
             this.label13.Text = "Account Number:";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label1
             // 
@@ -95,27 +98,28 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "Your Balance:";
             // 
-            // label3
+            // Balancelbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label3.Location = new System.Drawing.Point(307, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 24);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "BalanceinNG";
+            this.Balancelbl.AutoSize = true;
+            this.Balancelbl.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Balancelbl.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Balancelbl.Location = new System.Drawing.Point(307, 204);
+            this.Balancelbl.Name = "Balancelbl";
+            this.Balancelbl.Size = new System.Drawing.Size(102, 24);
+            this.Balancelbl.TabIndex = 40;
+            this.Balancelbl.Text = "BalanceinNG";
             // 
-            // label4
+            // AccNumberlbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Location = new System.Drawing.Point(307, 139);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 24);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "AccNumb";
+            this.AccNumberlbl.AutoSize = true;
+            this.AccNumberlbl.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccNumberlbl.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.AccNumberlbl.Location = new System.Drawing.Point(307, 139);
+            this.AccNumberlbl.Name = "AccNumberlbl";
+            this.AccNumberlbl.Size = new System.Drawing.Size(77, 24);
+            this.AccNumberlbl.TabIndex = 39;
+            this.AccNumberlbl.Text = "AccNumb";
+            this.AccNumberlbl.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel2
             // 
@@ -127,26 +131,28 @@
             this.panel2.Size = new System.Drawing.Size(569, 10);
             this.panel2.TabIndex = 41;
             // 
-            // label5
+            // Back
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label5.Location = new System.Drawing.Point(244, 333);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 26);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "LOGOUT";
+            this.Back.AutoSize = true;
+            this.Back.BackColor = System.Drawing.Color.Transparent;
+            this.Back.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Back.Location = new System.Drawing.Point(250, 340);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(65, 34);
+            this.Back.TabIndex = 42;
+            this.Back.Text = "Back";
+            this.Back.Click += new System.EventHandler(this.AccNumberlbl_Click);
             // 
             // Balance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 387);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Balancelbl);
+            this.Controls.Add(this.AccNumberlbl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel1);
@@ -169,9 +175,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Balancelbl;
+        private System.Windows.Forms.Label AccNumberlbl;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Back;
     }
 }
